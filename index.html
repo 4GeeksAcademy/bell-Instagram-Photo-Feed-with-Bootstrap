@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Instagram Photo Feed with Bootstrap</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+           <a class="navbar-brand" href="#">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+            </a>
+        
+        <div class="d-flex ">
+            <button type="button" class="btn btn-success mt-2 mr-2" data-bs-toggle="modal" data-bs-target="#newpost">
+                Create a new post
+            </button>
+            <div class="btn-group">
+                <button type="button" class="btn btn-secondary dropdown-toggle mt-2" data-bs-toggle="dropdown" aria-expanded="true">
+                    <i class="fa-solid fa-gear"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                  <li><a class="dropdown-item" href="#">Privacy and Data/a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item list-group-item-danger" href="#">Log Out</a></li>
+                </ul>
+            </div>
+       </div>
+      </nav>
+
+      <!-- Modal -->
+       <div class="modal fade" id="newpost" tabindex="-1" aria-labelledby="newpostLabel" aria-hidden="true">
+          <div class="modal-dialog">
+             <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="newpostLabel">Create a new post</h1>
+                  <button type="button" class="btn-close" aria-label="Close"></button>
+                </div>
+                    <div class="modal-body">
+                      <p>Caption</p>
+                      <div class="form-floating">
+                        <textarea class="form-control" placeholder="Add the caption of your post here" id="floatingTextarea"></textarea> 
+                        <button type="button" class="btn btn-outline-secondary mt-2"><i class="fa-solid fa-camera"></i></button>
+                        <button type="button" class="btn btn-outline-secondary mt-2"><i class="fa-solid fa-location-dot"></i></button>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Publish</button>
+                    </div>
+              </div>
+          </div>
+      </div>
+      
+      <!--pills for toggling-->
+
+      <div class="d-flex justify-content-center">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link btn-light bg-white" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#gridview" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-3x3" viewBox="0 0 16 16">
+                <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5zM1.5 1a.5.5 0 0 0-.5.5V5h4V1zM5 6H1v4h4zm1 4h4V6H6zm-1 1H1v3.5a.5.5 0 0 0 .5.5H5zm1 0v4h4v-4zm5 0v4h3.5a.5.5 0 0 0 .5-.5V11zm0-1h4V6h-4zm0-5h4V1.5a.5.5 0 0 0-.5-.5H11zm-1 0V1H6v4z"/>
+              </svg>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+          <button class="nav-link btn-light bg-white" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#feed" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-square-fill" viewBox="0 0 16 16">
+              <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2z"/>
+            </svg>
+          </button>
+          </li>
+        </ul>
+      </div> 
+      
+      <div class="tab-content" id="pills-tabContent">
+    <!--VIEW 1-->
+        <div class="tab-pane fade show active" id="gridview" role="tabpanel" aria-labelledby="pills-home-tab">
+          <div class="row">
+            <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/420"></div>
+            <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/420"></div>
+            <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/420"></div>
+          </div>
+        
+          <div class="row mt-2">
+            <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/420"></div>
+            <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/420"></div>
+            <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/420"></div>
+          </div>
+                        
+          <div class="row mt-2">
+            <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/420"></div>
+            <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/420"></div>
+            <div class="col-4 d-flex justify-content-center"><img src="https://picsum.photos/420"></div>
+          </div>
+        </div>
+  
+        <!--VIEW 2-->
+        <div class="tab-pane fade" id="feed" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6 d-flex justify-content-center">                                            
+              <div class="card">
+                <div class="card-header bg-white d-flex justify-content-between">
+                  <span><strong>My crazy dog Spark!</strong></span>
+                  <span>08/26</span>
+                </div>
+               <img src="https://i.pinimg.com/474x/60/b8/17/60b817c6b882d603739b2fbdcd004165.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                 <p class="card-text"><strong>Likes</strong></p>
+                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+          <div class="col-3"></div>
+          </div>
+          <div class="row mt-3">
+          <div class="col-3"></div>
+          <div class="col-6 d-flex justify-content-center">                                            
+            <div class="card">
+              <div class="card-header bg-white d-flex justify-content-between">
+                <span><strong>The greatness of Croatia</strong></span>
+                <span>04/09</span>
+              </div>
+              <img src="https://farm1.staticflickr.com/823/28196406718_386e76a104_o.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text"><strong>26985 Likes</strong> </p>
+                <p class="card-text">This an example of a very good photo that you can post on Instagram</p>
+              </div>
+            </div>
+          </div>
+         <div class="col-3"></div>
+         </div>
+         <div class="row mt-3">
+          <div class="col-3"></div>
+          <div class="col-6 d-flex justify-content-center">                                            
+            <div class="card">
+              <div class="card-header bg-white d-flex justify-content-between">
+                <span><strong>Amazing GOAL by Cristiano!</strong></span>
+                <span>06/10</span>
+              </div>
+              <img src="https://www.si.com/.image/t_share/MTY4MDA4MDYyNjkwNzk2OTI4/manchester-united-s-portuguese-player-cr-5cb5f546445b644f51000003jpg.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text"><strong>1001 likes</strong></p>
+                <p class="card-text">This an example of a very good photo that you can post on Instagram.</p>
+              </div>
+            </div>
+          </div>
+         <div class="col-3"></div>
+         </div>
+    </div>
+        
+    <script src="https://kit.fontawesome.com/b0c40fee91.js" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
